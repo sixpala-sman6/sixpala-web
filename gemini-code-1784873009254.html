@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIXPALA - SMAN 6 Makassar</title>
+    <style>
+        /* --- RESET & VARIABLE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2e7d32; /* Hijau alam */
+            --secondary: #1b5e20;
+            --accent: #f9a825; /* Kuning petualang */
+            --dark: #212121;
+            --light: #f4f6f4;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* --- NAVBAR --- */
+        header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #fbc02d;
+        }
+
+        /* --- SECTION STYLES --- */
+        section {
+            padding: 60px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--secondary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            display: block;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- TENTANG KAMI --- */
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+        }
+
+        /* --- DIVISI / KEGIATAN --- */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 5px solid var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer span {
+            color: var(--accent);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Disesuaikan untuk navigasi sederhana HP */
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav>
+            <div class="logo">SIX<span>PALA</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#divisi">Divisi</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO / UTAMA -->
+    <section class="hero" id="home">
+        <h1>SIXPALA MAKASSAR</h1>
+        <p>Siswa Pecinta Alam SMAN 6 Makassar. Lestari Alamku, Tangguh Jiwaku.</p>
+        <a href="#about" class="btn">Jelajahi Profil</a>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section id="about">
+        <h2 class="section-title">Tentang SIXPALA</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p><strong>SIXPALA</strong> adalah wadah kegiatan ekstrakurikuler bagi siswa-siswi SMAN 6 Makassar yang memiliki kepedulian terhadap kelestarian lingkungan serta minat dalam kegiatan alam terbuka.</p>
+                <br>
+                <p>Kami mendidik anggota untuk memiliki karakter yang tangguh, mandiri, berwawasan lingkungan, serta memiliki rasa persaudaraan yang erat antar sesama.</p>
+            </div>
+            <div class="about-text" style="background: #e8f5e9; padding: 20px; border-radius: 8px;">
+                <h3>Motto & Nilai Utama</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Kode Etik Pecinta Alam Indonesia</li>
+                    <li>Kepedulian Lingkungan & Konservasi</li>
+                    <li>Kedisiplinan & Kepemimpinan</li>
+                    <li>Solidaritas dan Persaudaraan</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIVISI & KEGIATAN -->
+    <section id="divisi" style="background-color: #eef2ee;">
+        <h2 class="section-title">Bidang & Kegiatan</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Mountaineering</h3>
+                <p>Kegiatan pendakian gunung, navigasi darat, manajamen perjalanan, dan teknik bertahan hidup di alam bebas (survival).</p>
+            </div>
+            <div class="card">
+                <h3>Konservasi Lingkungan</h3>
+                <p>Aksi nyata pelestarian alam seperti penanaman pohon, pengelolaan sampah sekolah, dan edukasi lingkungan.</p>
+            </div>
+            <div class="card">
+                <h3>ORAD (Olahraga Arus Deras)</h3>
+                <p>Pengenalan dan pelatihan kegiatan pengarungan sungai serta keselamatan di perairan.</p>
+            </div>
+            <div class="card">
+                <h3>Keorganisasian & SAR</h3>
+                <p>Pelatihan kepemimpinan, pertolongan pertama (P3K), serta materi tanggap bencana.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <p>Ingin bergabung atau berkolaborasi dengan SIXPALA SMAN 6 Makassar?</p>
+            <br>
+            <p><strong>Sekretariat:</strong> SMA Negeri 6 Makassar</p>
+            <p><strong>Instagram:</strong> @sixpala_smansix (contoh)</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 <span>SIXPALA</span> - Ekstrakurikuler Pecinta Alam SMAN 6 Makassar.</p>
+    </footer>
+
+</body>
+</html>
